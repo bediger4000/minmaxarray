@@ -19,9 +19,17 @@ This one seems to have that catch:
 | 4 | 4 |
 | 5 | 6 |
 
-What is a program going to do, give back some comparisons for 0- or 1-length arrays?
+What is a program going to do, give back some comparisons for 0-length arrays?
+The program still has to make a comparison of the array length to zero.
+
+For single element arrays, min and max values are just that of the only elemennt,
+but a program still has to make a comparison of the array length to 1.
+
 For arrays of length 2, zero comparisons doesn't make sense.
+At least 1 comparison has to be done to check if `array[0]` is less than `array[1]`.
 Should the interview candidate point this out?
+
+I'll assume arrays of more than 3 elements.
 
 The [obvious algorithm](a0.go) sets variables `minimum` and `maximum` to the smallest number and largest number
 representable by whatever type the variables possess,
