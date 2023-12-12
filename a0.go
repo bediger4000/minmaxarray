@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"math"
 	"os"
 	"strconv"
 )
@@ -10,6 +11,8 @@ import (
 /*
  * Given an array of numbers of length `N`,
  * find both the minimum and maximum using less than `2 * (N - 2)` comparisons.
+ *
+ * Extremely naive version.
  */
 
 func main() {
@@ -27,10 +30,10 @@ func main() {
 	fmt.Printf("Array N %d: %v\n", N, ary)
 
 	comparisonCount := 0
-	min := ary[0]
-	max := ary[0]
+	max := math.MinInt
+	min := math.MaxInt
 
-	for i := 1; i < N; i++ {
+	for i := 0; i < N; i++ {
 		comparisonCount++
 		if ary[i] < min {
 			min = ary[i]

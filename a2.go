@@ -34,6 +34,7 @@ func main() {
 		comparisonCount++
 		if ary[i] < min {
 			min = ary[i]
+			continue
 		}
 		comparisonCount++
 		if ary[i] > max {
