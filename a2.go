@@ -43,6 +43,10 @@ func main() {
 	}
 
 	fmt.Printf("2(N - 2) = %d\n", 2*(N-2))
-	fmt.Printf("made %d comparison\n", comparisonCount)
+	phrase := "does not meet criterion"
+	if comparisonCount < 2*(N-2) {
+		phrase = "meets criterion"
+	}
+	fmt.Printf("made %d comparison, 2(N-2) = %d, %s\n", comparisonCount, 2*(N-2), phrase)
 	fmt.Printf("min\t%d\nmax\t%d\n", min, max)
 }
