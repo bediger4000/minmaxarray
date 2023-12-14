@@ -30,21 +30,21 @@ func main() {
 	fmt.Printf("Array N %d: %v\n", N, ary)
 
 	comparisonCount := 0
-	max := math.MinInt
-	min := math.MaxInt
+	maximum := math.MinInt
+	minimum := math.MaxInt
 
 	for i := 0; i < N; i++ {
 		comparisonCount++
-		if ary[i] < min {
-			min = ary[i]
+		if ary[i] < minimum {
+			minimum = ary[i]
 		}
 		comparisonCount++
-		if ary[i] > max {
-			max = ary[i]
+		if ary[i] > maximum {
+			maximum = ary[i]
 		}
 	}
 
 	fmt.Printf("2(N - 2) = %d\n", 2*(N-2))
 	fmt.Printf("made %d comparison\n", comparisonCount)
-	fmt.Printf("min\t%d\nmax\t%d\n", min, max)
+	fmt.Printf("min\t%d\nmax\t%d\n", minimum, maximum)
 }

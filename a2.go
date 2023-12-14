@@ -27,18 +27,18 @@ func main() {
 	fmt.Printf("Array N %d: %v\n", N, ary)
 
 	comparisonCount := 0
-	min := ary[0]
-	max := ary[0]
+	minimum := ary[0]
+	maximum := ary[0]
 
 	for i := 1; i < N; i++ {
 		comparisonCount++
-		if ary[i] < min {
-			min = ary[i]
+		if ary[i] < minimum {
+			minimum = ary[i]
 			continue
 		}
 		comparisonCount++
-		if ary[i] > max {
-			max = ary[i]
+		if ary[i] > maximum {
+			maximum = ary[i]
 		}
 	}
 
@@ -48,5 +48,5 @@ func main() {
 		phrase = "meets criterion"
 	}
 	fmt.Printf("made %d comparison, 2(N-2) = %d, %s\n", comparisonCount, 2*(N-2), phrase)
-	fmt.Printf("min\t%d\nmax\t%d\n", min, max)
+	fmt.Printf("min\t%d\nmax\t%d\n", minimum, maximum)
 }
